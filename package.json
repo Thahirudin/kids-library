@@ -5,12 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "create-db:dev": "npx sequelize db:create --env development",
+    "migrate-db:dev": "npx sequelize db:migrate --env development",
+    "create-db:prod": "npx sequelize db:create --env production",
+    "migrate-db:prod": "npx sequelize db:migrate --env production",
+    "seed-db:prod": "npx sequelize db:seed:all --env production"
   },
   "author": "hier",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.11.5",
