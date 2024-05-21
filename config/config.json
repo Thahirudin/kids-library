@@ -1,10 +1,9 @@
 {
   "development": {
     "username": "postgres",
-    "password": "AXlJMspnvPydWpUIvrMxwCIrefbxiHnU",
-    "database": "railway",
-    "port": "53936",
-    "host": "viaduct.proxy.rlwy.net",
+    "password": "hiernurul2307",
+    "database": "kidslibrary",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
@@ -15,10 +14,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "postgres",
+    "password": "AXlJMspnvPydWpUIvrMxwCIrefbxiHnU",
+    "database": "railway",
+    "port": "53936",
+    "host": "viaduct.proxy.rlwy.net",
+    "dialect": "postgres"
   }
 }
