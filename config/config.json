@@ -3,6 +3,7 @@
     "username": "postgres",
     "password": "AXlJMspnvPydWpUIvrMxwCIrefbxiHnU",
     "database": "railway",
+    "port": "53936",
     "host": "viaduct.proxy.rlwy.net",
     "dialect": "postgres"
   },
