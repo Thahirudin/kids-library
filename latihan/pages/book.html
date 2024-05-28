@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../input_buku.css">
+    <title>Perpustakaan Online</title>
+</head>
+<body>
+    <div class="container">
+        <form id="contact" action="" method="post">
+            <h3>Masukkan Data Buku</h3>
+            <fieldset>
+                <label for="judul">Judul :</label>
+                <input placeholder="Judul" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <label for="kategori">Kategori :</label>
+                <select name="kategori" id="kategori">
+                    <option value="Religi">Religi</option>
+                    <option value="Dongeng">Dongeng</option>
+                    <option value="Pendidikan">Pendidikan</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="ringkasan">Ringkasan :</label>
+                <textarea placeholder="Ringkasan" type="text" rows="10" tabindex="3" required></textarea>
+            </fieldset>
+            <fieldset>
+                <label for="penulis">Penulis :</label>
+                <input placeholder="Penulis" type="text" tabindex="4" required>
+            </fieldset>
+            <fieldset>
+                <label for="image_url">Image url :</label>
+                <input placeholder="Image_url" type="file" tabindex="5" required>
+            </fieldset>
+            <fieldset>
+                <label for="read_url">Read url :</label>
+                <textarea placeholder="read_url" tabindex="6" required></textarea>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
