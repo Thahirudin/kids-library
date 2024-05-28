@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      User.belongsToMany(models.Buku, { through: 'UserBukus', foreignKey: 'userId', otherKey: 'bukuId' });
+      User.belongsToMany(models.Buku, { through: 'Favorit', foreignKey: 'userId', otherKey: 'bukuId' });
     }
   }
   User.init(
@@ -38,6 +38,18 @@ module.exports = (sequelize, DataTypes) => {
             args: true,
             msg: 'Email is not valid'
           }
+        }
+      },
+      role: DataTypes.STRING,
+      username: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+        validate: {
+          notEmpty: {
+            args: true,
+            msg: 'Username is required'
+          },
         }
       },
       password: {

@@ -21,9 +21,6 @@ module.exports = {
       penulis: {
         type: Sequelize.STRING
       },
-      tanggal_upload: {
-        type: Sequelize.DATE
-      },
       image_url: {
         type: Sequelize.STRING
       },

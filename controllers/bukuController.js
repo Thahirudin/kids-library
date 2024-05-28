@@ -20,14 +20,13 @@ class BukuController {
             })
     }
     static createBook(req, res) {
-        const { judul, kategori, ringkasan, penulis, tanggal_upload, image_url, read_url } = req.body;
+        const { judul, kategori, ringkasan, penulis,  image_url, read_url } = req.body;
 
         let data = {
             judul,
             kategori,
             ringkasan,
             penulis,
-            tanggal_upload,
             image_url,
             read_url
         }
@@ -41,13 +40,12 @@ class BukuController {
     }
     static updadateBook(req, res) {
         let id = +req.params.id;
-        const { judul, kategori, ringkasan, penulis, tanggal_upload, image_url, read_url } = req.body;
+        const { judul, kategori, ringkasan, penulis, image_url, read_url } = req.body;
         let data = {
             judul,
             kategori,
             ringkasan,
             penulis,
-            tanggal_upload,
             image_url,
             read_url
         }

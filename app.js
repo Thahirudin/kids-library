@@ -9,9 +9,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Set header Access-Control-Allow-Origin: http://localhost:9000
-app.use(cors({
-    origin: 'http://localhost:9000'
-}));
+app.use(cors());
 
 app.use(router);
 app.listen(PORT, () => {

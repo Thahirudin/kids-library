@@ -2,21 +2,18 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up(queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Users', [
+  async up (queryInterface, Sequelize) {
+    await queryInterface.bulkInsert('Favorits', [
       {
-        nama: 'Thahirudin',
-        username: 'thahirudin',
-        email: 'tohiruzain098@gmail.com',
-        role: 'admin',
-        password: '123456',
+        userId: 1,
+        bukuId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       }
-    ])
+    ], {})
   },
 
-  async down(queryInterface, Sequelize) {
+  async down (queryInterface, Sequelize) {
     /**
      * Add commands to revert seed here.
      *

@@ -20,7 +20,6 @@ module.exports = {
         penulis: 'J.R.R. Tolkien',
         image_url: 'https://archive.org/download/fairytales00anderich/fairytales00anderich.pdf',
         read_url: 'https://covers.openlibrary.org/b/id/8231470-M.jpg',
-        tanggal_upload: new Date(),
         createdAt: new Date(),
         updatedAt: new Date(),
       }

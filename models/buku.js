@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Buku.belongsToMany(models.User, { through: 'UserBukus', foreignKey: 'bukuId', otherKey: 'userId' });
+      Buku.belongsToMany(models.User, { through: 'Favorit', foreignKey: 'bukuId', otherKey: 'userId' });
     }
   }
   Buku.init({
@@ -18,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
     kategori: DataTypes.STRING,
     ringkasan: DataTypes.TEXT,
     penulis: DataTypes.STRING,
-    tanggal_upload: DataTypes.DATE,
     image_url: DataTypes.STRING,
     read_url: DataTypes.TEXT
   }, {
