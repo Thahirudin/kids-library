@@ -1,0 +1,140 @@
+.search-container {
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.search-container > input {
+  width: 100%;
+  align-items: center;
+  padding: 15px 15px;
+  border: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid #0284c7;
+  max-height: 58px;
+}
+
+.search-container > input:focus {
+  outline: 3px solid #f59670a7;
+  outline-offset: 1px;
+}
+
+.search-container > input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 9pt;
+}
+
+.search-container > button {
+  padding: 15px 22px;
+  background-color: #0284c7;
+  border: 1px solid #0284c7;
+  color: white;
+  cursor: pointer;
+  max-height: 58px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.search-container > button > svg {
+  height: 11pt;
+}
+
+.search-container > button:hover {
+  background-color: #0284c7;
+}
+.kategori_container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 0;
+}
+.kategori {
+  padding: 0.5rem 1rem;
+  width: 10rem;
+  border-radius: 0.5rem;
+  border: 1px solid #0284c7;
+  outline: #0369a1;
+}
+.buku_container {
+  max-width: 1200px;
+  padding: 1rem 0;
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+.buku_container a{
+    text-decoration: none;
+}
+.buku_card {
+  padding: 1rem;
+  border: 1px solid #d3d3d3;
+  background-color: white;
+  border-radius: 1rem;
+  color: #0f172a;
+}
+.buku_card:hover {
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+.buku_img {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.buku_body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.buku_kategori {
+  color: #334155;
+}
+.buku_judul h2 {
+  font-size: 18px;
+}
+.buku_img img {
+  max-height: 200px;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+.pagination{
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-number{
+  padding: 0.5rem 1rem;
+  background-color: #cbd5e1;
+  color: #0f172a;
+}
+.page-number.active{
+  background-color: #0284c7;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .search-container {
+    margin: 0 auto;
+    max-width: 50%;
+    padding: 3rem 0;
+  }
+  .buku_container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 3rem 0;
+  }
+  
+}
+@media screen and (min-width: 1200px) {
+  .buku_container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}

@@ -163,19 +163,7 @@ nav {
 .login-container button, .register-container button:hover {
   background-color: #0056b3;
 }
-.kategori_container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem 0;
-}
-.kategori {
-  padding: 0.5rem 1rem;
-  width: 10rem;
-  border-radius: 0.5rem;
-  border: 1px solid #0284c7;
-  outline: #0369a1;
-}
+
 footer {
   background-color: #0ea5e9;
   color: #ffffff;
@@ -258,28 +246,6 @@ footer {
   color: #bae6fd;
   transition: 0.5s ease-in-out;
 }
-.pagination{
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem 0;
-}
-.page-number{
-  padding: 0.5rem 1rem;
-  background-color: #cbd5e1;
-  color: #0f172a;
-}
-.page-number.active{
-  background-color: #0284c7;
-  color: white;
-}
-.page-number{
-  min-width: 2rem;
-  cursor: pointer;
-}
 @media screen and (min-width: 768px) {
   header {
     position: sticky;
@@ -320,7 +286,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
   }
   .nav_menu a {
     padding: 2rem;
@@ -341,4 +307,7 @@ footer {
   }
 }
 @media screen and (min-width: 1200px) {
+  .nav_menu ul {
+    gap: 4rem;
+  }
 }
