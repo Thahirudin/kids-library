@@ -63,7 +63,7 @@ const Beranda = {
               dapat mempengaruhi perkembangan intelektual dan kreatifitas.
             </p>
             <div>
-              <a href="#">Ayo Mulai Membaca</a>
+              <a href="#/buku">Ayo Mulai Membaca</a>
             </div>
           </div>
           <div class="membaca_img">

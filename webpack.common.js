@@ -1,6 +1,11 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const path = require('path');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: {
@@ -28,8 +33,10 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
+
     new HtmlWebpackPlugin({
-      filename: 'user.html',
+      filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/user.html'),
       chunks: ['app'],
     }),
@@ -46,5 +53,27 @@ module.exports = {
         },
       ],
     }),
+    new WorkboxWebpackPlugin.GenerateSW({
+      swDest: 'sw.bundle.js',
+      mode: 'production',
+      runtimeCaching: [
+        {
+          urlPattern: ({ url }) => url.href.startsWith('https://kids-library-production.up.railway.app'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'kidslibrary-api',
+          },
+        },
+      ],
+    }),
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
+      ],
+    }),
+    new BundleAnalyzerPlugin(),
   ],
 };

@@ -1,4 +1,6 @@
-const Beranda = {
+import LikeButtonInitiator from '../../utils/like-button-initiator';
+
+const DetailBuku = {
   async render() {
     return `
     <style>
@@ -105,12 +107,19 @@ h1 {
           </div>
         </div>
       </div>
+      <div id="likeButtonContainer"></div>
     `;
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      buku: {
+        id: 1,
+      },
+      userId: 1,
+    });
   },
 };
 
-export default Beranda;
+export default DetailBuku;

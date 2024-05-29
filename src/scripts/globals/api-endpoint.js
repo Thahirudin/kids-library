@@ -1,7 +1,5 @@
-import CONFIG from './config';
-
 const API_ENDPOINT = {
-  LISTBUKU: `${CONFIG.BASE_URL}buku`,
+  LISTBUKU: 'https://kids-library-production.up.railway.app/buku',
 };
 
 export default API_ENDPOINT;

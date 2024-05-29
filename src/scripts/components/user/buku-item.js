@@ -9,7 +9,6 @@ class BukuItem extends HTMLElement {
     image_url: null,
     penulis: null,
     ringkasan: null,
-    tanggalPublish: null,
     kategori: null,
     read_url: null,
   };
@@ -84,7 +83,6 @@ a{
     this._bukus.ringkasan = value.ringkasan;
     this._bukus.penulis = value.penulis;
     this._bukus.read_url = value.read_url;
-    this._bukus.tanggalUpload = value.tanggal_upload;
     this.render();
   }
 

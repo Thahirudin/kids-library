@@ -6,6 +6,9 @@ import '../components/user/search-bar';
 import '../components/user/buku-container';
 import '../components/user/buku-item';
 import '../components/user/footer-bar';
+import swRegister from '../utils/sw-register';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import App from '../views/app';
 
 const app = new App({
@@ -20,4 +23,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });

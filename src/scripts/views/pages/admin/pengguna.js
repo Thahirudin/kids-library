@@ -34,12 +34,12 @@ const Pengguna = {
   },
 
   async afterRender() {
-    const menuItems = document.querySelectorAll(".menu a");
-    const menuactive = document.querySelector(".menu-pengguna");
+    const menuItems = document.querySelectorAll('.menu a');
+    const menuactive = document.querySelector('.menu-pengguna');
     menuItems.forEach((item) => {
-      item.classList.remove("active");
+      item.classList.remove('active');
     });
-    menuactive.classList.add("active");
+    menuactive.classList.add('active');
   },
 };
 

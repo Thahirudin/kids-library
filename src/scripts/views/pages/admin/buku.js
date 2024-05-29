@@ -1,10 +1,10 @@
 const Buku = {
-    async render() {
-      return `
+  async render() {
+    return `
         <section class="table_container">
             <h1>Tabel Buku</h1>
             <div>
-              <button class="tambah_button">Tambah Buku</button>
+              <a href="/admin#/tambah-buku" class="tambah_button">Tambah Buku</a>
             </div>
             <div class="table_responsive">
               <table>
@@ -31,16 +31,16 @@ const Buku = {
             </div>
           </section>
       `;
-    },
-  
-    async afterRender() {
-      const menuItems = document.querySelectorAll('.menu a');
-      const menuactive = document.querySelector('.menu-buku');
-      menuItems.forEach((item) => {
-        item.classList.remove('active');
-      });
-      menuactive.classList.add('active');
-    },
-  };
-  
-  export default Buku;
+  },
+
+  async afterRender() {
+    const menuItems = document.querySelectorAll('.menu a');
+    const menuactive = document.querySelector('.menu-buku');
+    menuItems.forEach((item) => {
+      item.classList.remove('active');
+    });
+    menuactive.classList.add('active');
+  },
+};
+
+export default Buku;

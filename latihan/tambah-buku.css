@@ -1,0 +1,42 @@
+
+.form {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 0.25);
+  border-radius: 0.5rem;
+  h1{
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  .form-control {
+    margin-bottom: 1rem;
+    width: 100%;
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    input, select, textarea {
+      background-color: #f8fafc;
+      width: 100%;
+      margin: 0;
+      border: 1px solid #94a3b8;
+      padding: 0.6rem;
+      border-radius: 0.6rem;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: 1px solid #38bdf8;
+    }
+    button{
+      background-color: #0284c7;
+      color: white;
+      border: none;
+      border-radius: 0.6rem;
+      padding: 0.8rem;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}

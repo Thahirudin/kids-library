@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 const Masuk = {
   async render() {
     return `
@@ -46,7 +47,7 @@ const Masuk = {
         // Simpan token (misalnya, ke localStorage)
         localStorage.setItem('token', token);
         alert('Login berhasil!');
-        window.location.href = '#/buku';
+        window.location.href = './#/favorit';
       } catch (error) {
         console.error('Error:', error);
         alert('Login gagal. Silakan coba lagi.');
